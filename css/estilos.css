@@ -1,0 +1,49 @@
+
+/***  Estilos iniciales ***/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 10px 0;
+}
+
+/*** Cabecera ***/
+.banner {
+  background-color: green;
+  height: 150px;
+}
+
+.session {
+  background-color: blue;
+  height: 50px;
+  padding: 0;
+}
+
+.color {
+  background-color: red;
+  height: 50px;
+}
+
+/*** Menu **/
+.menu {
+  height: 400px;
+  background-color: yellow;
+}
+
+/*** Main **/
+.main {
+  height: 400px;
+  background-color: black;
+  color: white;
+}
+
+/*** Footer ***/
+.pie {
+  height: 100px;
+  background-color: brown;
+}
