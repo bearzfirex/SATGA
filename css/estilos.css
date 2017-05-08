@@ -14,19 +14,26 @@ body {
 
 /*** Cabecera ***/
 .banner {
-  background-color: green;
   height: 150px;
 }
 
-.session {
-  background-color: blue;
-  height: 50px;
-  padding: 0;
+.banner .img-fluid {
+  height: 100%;
+  width: 100%;
+  width: 100% \9;
 }
 
-.color {
-  background-color: red;
+.session {
   height: 50px;
+}
+
+.session .row {
+  background-color: #e9e9e9;
+}
+
+.session .btn {
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 
 /*** Menu **/
@@ -51,27 +58,29 @@ body {
 /*** Responsive Design ***/
 /*** Cambiar por max-width para dispositovs -breakpoint- para arriba ***/
 /*** Dispositivos extra pequeños (Telefonos y Smarthphones) para abajo ***/
-html {
-  font-size: 14px;
-}
+//@media (max-width: 576px) {  }
+  html {
+    font-size: 12px;
+  }
+
 
 /*** Dispositivos pequeños (Smarthphones) para abajo ***/
 @media (min-width: 768px) {
   html {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
 /*** Dispositivos medianos para abajo (Tablets, Laptops, PC) ***/
 @media (min-width: 992px) {
   html {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
 /*** Dispositivos grandes para abajo (PC, Laptops) ***/
 @media (min-width: 1200px) {
   html {
-    font-size: 28px;
+    font-size: 17px;
   }
 }
