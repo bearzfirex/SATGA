@@ -25,7 +25,7 @@ include('../complementos/cabecera.php');
   <section class="container">
     <div class="row">
      <!-- Menu/Aside -->
-      <nav class="col-4 menu text-center">
+      <nav class="col-3 menu text-center">
 <?php
 include('../complementos/menu.php');
 ?>

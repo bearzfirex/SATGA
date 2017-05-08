@@ -47,3 +47,31 @@ body {
   height: 100px;
   background-color: brown;
 }
+
+/*** Responsive Design ***/
+/*** Cambiar por max-width para dispositovs -breakpoint- para arriba ***/
+/*** Dispositivos extra pequeños (Telefonos y Smarthphones) para abajo ***/
+html {
+  font-size: 14px;
+}
+
+/*** Dispositivos pequeños (Smarthphones) para abajo ***/
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/*** Dispositivos medianos para abajo (Tablets, Laptops, PC) ***/
+@media (min-width: 992px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+/*** Dispositivos grandes para abajo (PC, Laptops) ***/
+@media (min-width: 1200px) {
+  html {
+    font-size: 28px;
+  }
+}
