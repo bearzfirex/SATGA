@@ -1,5 +1,5 @@
 
-/***  Estilos iniciales ***/
+/************************* Estilos iniciales *****************/
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +12,7 @@ body {
   margin: 10px 0;
 }
 
-/*** Cabecera ***/
+/*************************** Cabecera ***********************/
 .banner {
   height: 150px;
 }
@@ -35,24 +35,134 @@ body {
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
 }
-/*** Pagina central ***/
+/************************ Pagina central *********************/
 .pagina-central {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-/*** Menu **/
-.menu {
-  height: 400px;
-  background-color: yellow;
+/************************ Menu *******************************/
+.contenedor-menu {
+  height: 530px;
+  width: 100%;
+  display: inline-block;
+  line-height: 18px;
 }
 
-/*** Main **/
+.contenedor-menu a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.contenedor-menu .menu {
+  width: 100%;
+}
+
+.contenedor-menu ul {
+  list-style: none;
+  overflow: auto;
+  height: 100%;
+}
+
+.contenedor-menu ul li ul{
+  overflow-y: hidden; 
+  height: auto;
+}
+
+.contenedor-menu .menu li a{
+  color: #494949;
+  display: block;
+  padding: 15px 20px; /*Tamaño de elemento del menu*/
+  background: #e9e9e9;
+  transition: 0.3s;
+  transition-timing-function: ease-out;
+}
+
+.contenedor-menu .menu>li>a:hover { /*Color de elementos hijos del tag nav*/
+  background: #2574A9;
+  color: #fff;
+}
+
+.contenedor-menu .menu .icono {
+  line-height: 18px; /*debe ser igual al line height de su contenedor para evitar cruses de texto o iconos*/
+}
+
+.contenedor-menu .menu .icono.izquierda { /*Posiciona los iconos */
+  float: left;
+  margin-right: 10px;
+}
+
+.contenedor-menu .menu .icono.derecha{
+  float: right;
+  margin-left: 10px;
+}
+
+.contenedor-menu .menu ul {
+  display: none; /*ocultar submenus*/
+}
+
+.contenedor-menu .menu ul li a{
+  background: #BDC3C7;
+  color: #494949;
+  transition: 0.3s0.5s;
+  transition-timing-function: ease-out;
+}
+
+.contenedor-menu .menu ul li a:hover { /*color de elementos secundarios del menú al pasar el cursor*/
+  background: #1a95d5;
+  color: #fff;
+}
+
+.contenedor-menu .menu .activado > a {
+  background: #2574A9; /*clase para mantener el color en la seleccion activa*/
+  color: #fff;
+}
+
+.btn-menu { /*** Boton de menu solo activo para dispositivos de baja resolucion ***/
+  display: none;
+  padding: 20px;
+  background: #044b95;
+  color: #fff;
+}
+
+.btn-menu .icono { /*** Mueve el icono del menu para moviles a la derecha ***/
+  float: right;
+}
+
+@media screen and (max-width: 767px) { /*** Si la pantalla es pequeña ***/
+  body {
+    padding-top: 50px;
+  }
+
+  .contenedor-menu{
+    margin: 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: block;
+    overflow: auto;
+  }
+
+  .btn-menu{
+    display: block;
+  }
+
+  .btn-menu .icono {
+    float: right;
+    margin-right: 3%;
+  }
+
+  .contenedor-menu .menu{
+    display: none;
+  }
+}
+
+/****************************** Main **********************************/
 .main {
-  height: 400px;
-  background-color: red;
+  height: 530px;
 }
 
-/*** Footer ***/
+/********************************* Footer ***************************/
 .pie {
   height: 100px;
 
@@ -60,28 +170,34 @@ body {
 
 /*** Responsive Design ***/
 /*** Cambiar por max-width para dispositovs -breakpoint- para arriba ***/
-/*** Dispositivos extra pequeños (Telefonos y Smarthphones) para abajo ***/
-//@media (max-width: 576px) {  }
+
+/*** Dispositovs extra pequeños (Telefonos) XS ***/
+html {
+  font-size: 12px;
+}
+
+/*** Dispositivos pequeños (SmarthPhones) SM para abajo ***/
+@media (min-width: 576px) {  
   html {
     font-size: 12px;
   }
+}
 
-
-/*** Dispositivos pequeños (Smarthphones) para abajo ***/
+/*** Dispositivos Medianos (Tablets) MD para abajo ***/
 @media (min-width: 768px) {
   html {
     font-size: 14px;
   }
 }
 
-/*** Dispositivos medianos para abajo (Tablets, Laptops, PC) ***/
+/*** Dispositivos Grandes para abajo (PC) LG ***/
 @media (min-width: 992px) {
   html {
     font-size: 16px;
   }
 }
 
-/*** Dispositivos grandes para abajo (PC, Laptops) ***/
+/*** Dispositivos Extra Grandes para abajo (PC, Laptops Grandes) XL ***/
 @media (min-width: 1200px) {
   html {
     font-size: 17px;

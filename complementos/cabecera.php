@@ -1,5 +1,5 @@
       <!-- Banner -->
-      <div class="col-12 banner text-center">
+      <div class="col-12 banner hidden-sm-down">
         <img src="../complementos/Banner SATGA-3.png" class="img-fluid" alt="Banner de la empresa" />
       </div>
       <!-- Informacion de Sesion -->
@@ -7,18 +7,18 @@
         <div class="container-fluid">
           <div class="row">
             <!-- Datos de Usuario -->
-            <div class="col-3 text-left">
-              <i class="fa fa-user"></i> Nombre de Sesion<br>
+            <div class="col-12 col-md-3 text-center text-md-left">
+              <i class="fa fa-user"></i> Nombre de Sesion &ensp;&ensp;<br class="hidden-sm-down" />
               <i class="fa fa-black-tie"></i> Privilegio de Sesion
             </div>
             <!-- Boton de Ocultar -->
-            <div class="col text-center">
+            <div class="col hidden-sm-down text-center">
               <button id="ocultarBanner" type="button" role="button" class="btn btn-secondary">
                 <i class="fa fa-angle-double-up"></i> Ocultar Banner <i class="fa fa-angle-double-up"></i>
               </button>
             </div>
             <!-- Fecha y Hora actual -->
-            <div class="col-3 text-right reloj">
+            <div class="col-md-3 hidden-sm-down text-right reloj">
               <span id="fecha"></span><br><span id="hora"></span>
 
             </div>
