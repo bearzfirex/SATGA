@@ -27,7 +27,7 @@ body {
   height: 50px;
 }
 
-.session .row {
+.session div {
   background-color: #e9e9e9;
 }
 
@@ -35,7 +35,11 @@ body {
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
 }
-
+/*** Pagina central ***/
+.pagina-central {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 /*** Menu **/
 .menu {
   height: 400px;
@@ -45,14 +49,13 @@ body {
 /*** Main **/
 .main {
   height: 400px;
-  background-color: black;
-  color: white;
+  background-color: red;
 }
 
 /*** Footer ***/
 .pie {
   height: 100px;
-  background-color: brown;
+
 }
 
 /*** Responsive Design ***/

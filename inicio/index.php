@@ -20,18 +20,20 @@ include('../complementos/cabecera.php');
   </header>
 
   <!-- Main -->
-  <section class="container-fluid">
+  <section class="container-fluid pagina-central">
     <div class="row">
-     <!-- Menu/Aside -->
-      <nav class="col-3 menu text-center">
+      <!-- Menu/Aside -->
+      <div class="col-3 text-center">
 <?php
 include('../complementos/menu.php');
 ?>
-      </nav>
-     <!-- Main -->
-      <section class="col main text-center">
-        <p>Principal</p>
-      </section>
+      </div> 
+      <!-- Main -->
+      <div class="col text-center">
+       <section class="main">
+         <p>Principal</p>
+        </section>
+      </div>
     </div>
   </section>
 

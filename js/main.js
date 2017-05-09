@@ -16,7 +16,53 @@ $(document).ready(function(){
       $("#ocultarBanner").append(activo)
     }
   });
-  function reloj() {
 
-  }
+  setInterval(function(){ //Funcion para el reloj en la cabecera
+    var date = new Date(); //obtener fecha local y almacenarla cada dato
+    var d = date.getDate();
+    var m = date.getMonth()+1;
+    var a = date.getFullYear();
+    var h = date.getHours();
+    var mi = date.getMinutes();
+    var s = date.getSeconds();
+
+    if (h > 12) {
+      h = h - 12;
+      var momento = 'p.m.';
+    }
+
+    else{
+      var momento = 'a.m.';
+    }
+
+    str_hora = new String(h);
+    if (str_hora.length == 1) {
+        h = '0' + h;
+    }
+
+    str_minuto = new String(mi);
+    if (str_minuto.length == 1) {
+        mi = '0' + mi;
+    }
+
+    str_segundo = new String(s);
+    if (str_segundo.length == 1) {
+        s = '0' + s;
+    }
+
+    str_dia = new String(d);
+    if (str_dia.length == 1) {
+        d = '0' + d;
+    }
+    
+    str_mes = new String(m);
+    if (str_mes.length == 1) {
+        m = '0' + m;
+    }
+    var fecha = d + "/" + m + "/" + a;
+    var hora = h + ":" + mi + ":" + s + " " + momento;
+    $('#fecha').text(fecha);
+    $('#hora').text(hora);
+    
+  }, 1000);
 });

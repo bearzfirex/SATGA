@@ -1,1 +1,3 @@
-        <p>Menu</p>
+        <nav class="menu">
+          <p>Menu</p>
+        </nav>
