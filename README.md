@@ -14,16 +14,8 @@ Este repositorio solo constara de la interfaz de usuario, mientras que sus funci
 
 -Jquery //Libreria de javascript
 
--Bootrstrap - Componentes utilizados: //Framework css y componentes javascript
+-Bootrstrap //Framework css y componentes javascript
 
-  -Grid de Bootstrap.
-  
-  -Utilidades Responsive Designs.
-  
-  -Alineados de texto.
-  
-  -Botones.
-  
-  -Jumbotron.
+-Tether //Libreria de javascript para posicionar elementos, necesario para algunos componentes de bootstrap
 
 -Font awesome //Iconos
