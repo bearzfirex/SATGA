@@ -15,10 +15,15 @@ Este repositorio solo constara de la interfaz de usuario, mientras que sus funci
 -Jquery //Libreria de javascript
 
 -Bootrstrap - Componentes utilizados: //Framework css y componentes javascript
+
   -Grid de Bootstrap.
+  
   -Utilidades Responsive Designs.
+  
   -Alineados de texto.
+  
   -Botones.
+  
   -Jumbotron.
 
 -Font awesome //Iconos
