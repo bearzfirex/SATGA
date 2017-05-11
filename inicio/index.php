@@ -5,7 +5,8 @@
   <title>Inicio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Meta viewport requerido por el grid de bootstrap -->
   <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"> <!-- CSS de bootstrap -->
-  <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css"> <!-- Fuente de iconos -->
+  <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css"> <!-- Fuente de iconos generales -->
+  <link rel="stylesheet" type="text/css" href="../css/font-mfizz.css"> <!-- Iconos de programacion -->
   <link rel="stylesheet" type="text/css" href="../css/estilos.css"> <!-- Estilos principales y personalizados -->
 </head>
 <body>
@@ -30,25 +31,23 @@ include('../complementos/menu.php');
       </div> 
       <!-- Main -->
       <div class="col text-center">
-       <section class="jumbotron main">
-         <h1 class="display-3">¡Bienvenido a SATGA!</h1>
-         <hr class="my-4">
-         <p class="lead">{Nombre y Apellido} Usted posee privilegios de {privilegios} en el uso del sistema.</p>
-         <hr class="my-4">
-         <p>Porfavor navegue por el sistema usando el menu de la izquierda</p>
+        <section class="jumbotron main">
+          <h1 class="display-3">¡Bienvenido a SATGA!</h1>
+          <hr class="my-4">
+          <p class="lead">{Nombre y Apellido} Usted posee privilegios de {privilegios} en el uso del sistema.</p>
+          <hr class="my-4">
+          <p>Por favor navegue por el sistema usando el menu de la izquierda</p>
         </section>
       </div>
     </div>
   </section>
 
   <!-- Pie de pagina/Footer -->
-  <footer class="container-fluid">
+  <footer class="container-fluid" role="footer">
     <div class="row">
-      <div class="col pie text-ceter">
 <?php
 include('../complementos/footer.php');
 ?>
-      </div>
     </div>    
   </footer>
   <script src="../js/jquery.js"></script> <!-- Jquery -->

@@ -162,11 +162,29 @@ body {
   height: 530px;
 }
 
+.formulario {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 /********************************* Footer ***************************/
 .pie {
-  height: 100px;
-
+  margin: 0;
 }
+
+.iconos-pie {
+  width: 100%;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.icon-html5-alt{color: #F27935;}
+.icon-css3-alt{color: #446CB3;}
+.icon-php-alt{color: #3A539B;}
+.icon-javascript-alt{color: #E9D460;}
+.icon-bootstrap{color: #674172;}
+.icon-mariadb{color: #c49a6c;}
+.icon-apache{color: #F62459}
 
 /*** Responsive Design ***/
 /*** Cambiar por max-width para dispositovs -breakpoint- para arriba ***/
