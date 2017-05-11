@@ -18,4 +18,6 @@ Este repositorio solo constara de la interfaz de usuario, mientras que sus funci
 
 -Tether //Libreria de javascript para posicionar elementos, necesario para algunos componentes de bootstrap
 
--Font awesome //Iconos
+-Font awesome //Iconos Generales
+
+-Font mfizz //Iconos de Programacion
