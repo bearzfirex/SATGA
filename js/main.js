@@ -86,6 +86,7 @@ $(document).ready(function(){
   $('.btn-menu').click(function(abrirmenu){ //Mostrar el menu en dispositivos moviles
     abrirmenu.preventDefault();
     $('.contenedor-menu .menu').slideToggle();
+    $('.contenedor-menu').toggleClass('menu-index');
   });
 
   if ($(document).width() < 768){ //Si es un dispositivo de pantalla pequeña oculta la columna del menu y si es grande la vuelve a mostrar

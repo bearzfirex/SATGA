@@ -30,13 +30,15 @@ include('../complementos/menu.php');
 ?>
       </div> 
       <!-- Main -->
-      <div class="col text-center">
-        <section class="jumbotron main">
-          <h1 class="display-3">¡Bienvenido a SATGA!</h1>
-          <hr class="my-4">
-          <p class="lead">{Nombre y Apellido} Usted posee privilegios de {privilegios} en el uso del sistema.</p>
-          <hr class="my-4">
-          <p>Por favor navegue por el sistema usando el menu de la izquierda</p>
+      <div class="col main text-center">
+        <section class="jumbotron jumbotron-fluid">
+          <div class="container-fluid">
+            <h1 class="display-3">¡Bienvenido a SATGA!</h1>
+            <hr class="my-4">
+            <p class="lead">{Nombre y Apellido} Usted posee privilegios de {privilegios} en el uso del sistema.</p>
+            <hr class="my-4">
+            <p>Por favor navegue por el sistema usando el menu de navegación</p>
+          </div>
         </section>
       </div>
     </div>

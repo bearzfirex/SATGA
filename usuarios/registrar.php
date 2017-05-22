@@ -30,69 +30,93 @@ include('../complementos/menu.php');
 ?>
       </div> 
       <!-- Main -->
-      <div class="col text-center">
-        <section class="jumbotron main formulario">
+      <div class="col main text-center">
+        <section class="jumbotron jumbotron-fluid formulario">
           <div class="container-fluid">
             <h1>Registrar nuevo usuario</h1>
             <hr class="my-4">
             <form>
               <div class="form-group row d-flex justify-content-center">
-                <label for="cedula" class="col-2 col-form-label col-form-label-sm text-left"><b>Cedula:</b></label>
-                <div class="col-4">
-                  <input type="text" id="cedula" class="form-control form-control-sm" placeholder="Cedula">
+                <label for="cedula" class="col-2 col-md-2 col-form-label col-form-label-sm text-left"><b>Cedula</b></label>
+                <div class="col-8 col-md-4">
+                  <div class="input-group input-group-sm">
+                    <span class="input-group-addon">icono</span>
+                    <input type="text" id="cedula" class="form-control" placeholder="Cedula">
+                  </div>
                 </div>
               </div>
               <div class="form-group row d-flex justify-content-center">
-                <label for="nombre" class="col-2 col-form-label col-form-label-sm text-left"><b>Nombre:</b></label>
-                <div class="col-4">
-                  <input type="text" id="nombre" class="form-control form-control-sm" placeholder="Nombre">
+                <label for="nombre" class="col-2 col-md-2 col-form-label col-form-label-sm text-left"><b>Nombre</b></label>
+                <div class="col-8 col-md-4">
+                  <div class="input-group input-group-sm">
+                    <span class="input-group-addon">icono</span>
+                    <input type="text" id="nombre" class="form-control form-control-sm" placeholder="Nombre">
+                  </div>
                 </div>
               </div>
               <div class="form-group row d-flex justify-content-center">
-                <label for="apellido" class="col-2 col-form-label col-form-label-sm text-left"><b>Apellido:</b></label>
-                <div class="col-4">
-                  <input type="text" id="apellido" class="form-control form-control-sm" placeholder="Apellido">
+                <label for="apellido" class="col-2 col-md-2 col-form-label col-form-label-sm text-left"><b>Apellido</b></label>
+                <div class="col-8 col-md-4">
+                  <div class="input-group input-group-sm">
+                    <span class="input-group-addon">icono</span>
+                    <input type="text" id="apellido" class="form-control form-control-sm" placeholder="Apellido">
+                  </div>
                 </div>
               </div>
               <div class="form-group row d-flex justify-content-center">
-                <label for="usuario" class="col-2 col-form-label col-form-label-sm text-left"><b>Usuario:</b></label>
-                <div class="col-4">
-                  <input type="text" id="usuario" class="form-control form-control-sm" placeholder="Usuario">
+                <label for="usuario" class="col-2 col-md-2 col-form-label col-form-label-sm text-left"><b>Usuario</b></label>
+                <div class="col-8 col-md-4">
+                  <div class="input-group input-group-sm">
+                    <span class="input-group-addon">icono</span>
+                    <input type="text" id="usuario" class="form-control form-control-sm" placeholder="Usuario">
+                  </div>
                 </div>
               </div>
               <div class="form-group row d-flex justify-content-center">
-                <label for="contrasena" class="col-2 col-form-label col-form-label-sm text-left"><b>Contraseña:</b></label>
-                <div class="col-4">
-                  <input type="text" id="contrasena" class="form-control form-control-sm" placeholder="Contraseña">
+                <label for="contrasena" class="col-2 col-md-2 col-form-label col-form-label-sm text-left"><b>Contraseña</b></label>
+                <div class="col-8 col-md-4">
+                  <div class="input-group input-group-sm">
+                    <span class="input-group-addon">icono</span>
+                    <input type="text" id="contrasena" class="form-control form-control-sm" placeholder="Contraseña">
+                  </div>
                 </div>
               </div>
               <div class="form-group row d-flex justify-content-center">
-                <label for="privilegio" class="col-2 col-form-label col-form-label-sm text-left"><b>Privilegio</b></label>
-                <div class="col-4">
-                  <select id="privilegio" class="custom-select form-control form-control-sm">
-                    <option hidden="on">Seleccione una opcion...</option>
-                    <option>Administrador</option>
-                    <option>Usuario</option>
-                  </select>
+                <label for="privilegio" class="col-2 col-md-2 col-form-label col-form-label-sm text-left"><b>Privilegio</b></label>
+                <div class="col-8 col-md-4">
+                  <div class="input-group input-group-sm">
+                    <span class="input-group-addon">icono</span>
+                    <select id="privilegio" class="custom-select form-control form-control-sm">
+                      <option hidden="on">Seleccione...</option>
+                      <option>Administrador</option>
+                      <option>Usuario</option>
+                    </select>
+                  </div>
                 </div>
               </div>
               <div class="form-group row d-flex justify-content-center">
-                <label for="telefono" class="col-2 col-form-label col-form-label-sm text-left"><b>Telefono:</b></label>
-                <div class="col-4">
-                  <input type="text" id="telefono" class="form-control form-control-sm" placeholder="Telefono">
+                <label for="telefono" class="col-2 col-md-2 col-form-label col-form-label-sm text-left"><b>Telefono</b></label>
+                <div class="col-8 col-md-4">
+                  <div class="input-group input-group-sm">
+                    <span class="input-group-addon">icono</span>
+                    <input type="text" id="telefono" class="form-control form-control-sm" placeholder="Telefono">
+                  </div>
                 </div>
               </div>
               <div class="form-group row d-flex justify-content-center">
-                <label for="direccion" class="col-2 col-form-label col-form-label-sm text-left"><b>Dirección:</b></label>
-                <div class="col-4">
-                  <input type="text" id="direccion" class="form-control form-control-sm" placeholder="Dirección">
+                <label for="direccion" class="col-1 col-md-2 col-form-label col-form-label-sm text-left"><b>Dirección</b></label>
+                <div class="col-8 col-md-4">
+                  <div class="input-group input-group-sm">
+                    <span class="input-group-addon">icono</span>
+                    <input type="text" id="direccion" class="form-control form-control-sm" placeholder="Dirección">
+                  </div>
                 </div>
               </div>
               <div class="row d-flex justify-content-center">
-                <div class="col-3">
+                <div class="col-5 col-md-3">
                   <button type="submit" class="btn btn-success btn-block"><i class="fa fa-check-square-o"></i> Registrar</button>
                 </div>
-                <div class="col-3">
+                <div class="col-5 col-md-3">
                   <button type="submit" class="btn btn-danger btn-block">Limpiar <i class="fa fa-times-rectangle-o"></i></button>
                 </div>
               </div>

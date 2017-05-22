@@ -23,12 +23,8 @@ body {
   width: 100% \9;
 }
 
-.session {
-  height: 50px;
-}
-
 .session div {
-  background-color: #e9e9e9;
+  background-color: #E9D460;
 }
 
 .session .btn {
@@ -37,15 +33,22 @@ body {
 }
 /************************ Pagina central *********************/
 .pagina-central {
-  margin-top: 10px;
-  margin-bottom: 10px;
+ 
 }
 /************************ Menu *******************************/
+.columna-menu {
+  padding-right: 0;
+}
+
 .contenedor-menu {
-  height: 530px;
+  height: 531px;
   width: 100%;
   display: inline-block;
   line-height: 18px;
+  border-top: solid 1px;
+  border-right: solid 1px;
+  border-bottom: solid 1px;
+  border-color: #ABB7B7;
 }
 
 .contenedor-menu a {
@@ -72,13 +75,13 @@ body {
   color: #494949;
   display: block;
   padding: 15px 20px; /*Tamaño de elemento del menu*/
-  background: #e9e9e9;
+  background-color: #E4F1FE; /*Color del Menu*/
   transition: 0.3s;
   transition-timing-function: ease-out;
 }
 
 .contenedor-menu .menu>li>a:hover { /*Color de elementos hijos del tag nav*/
-  background: #2574A9;
+  background-color: #1E8BC3;
   color: #fff;
 }
 
@@ -101,26 +104,26 @@ body {
 }
 
 .contenedor-menu .menu ul li a{
-  background: #BDC3C7;
+  background-color: #E9D460;
   color: #494949;
   transition: 0.3s0.5s;
   transition-timing-function: ease-out;
 }
 
 .contenedor-menu .menu ul li a:hover { /*color de elementos secundarios del menú al pasar el cursor*/
-  background: #1a95d5;
+  background-color: #F27935;
   color: #fff;
 }
 
 .contenedor-menu .menu .activado > a {
-  background: #2574A9; /*clase para mantener el color en la seleccion activa*/
+  background-color: #1E8BC3; /*clase para mantener el color en la seleccion activa*/
   color: #fff;
 }
 
 .btn-menu { /*** Boton de menu solo activo para dispositivos de baja resolucion ***/
   display: none;
   padding: 20px;
-  background: #044b95;
+  background-color: #044b95;
   color: #fff;
 }
 
@@ -138,9 +141,12 @@ body {
     width: 100%;
     position: fixed;
     top: 0;
-    z-index: 1000;
     display: block;
     overflow: auto;
+  }
+
+  .menu-index {
+    z-index: 1000; /*** Clase para darle prioridad al menu en la pantalla ***/
   }
 
   .btn-menu{
@@ -159,12 +165,18 @@ body {
 
 /****************************** Main **********************************/
 .main {
-  height: 530px;
+  padding-left: 0;
 }
 
 .formulario {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 0;
+}
+
+.jumbotron {
+  border-top: solid 1px;
+  border-bottom: solid 1px;
+  border-color: #ABB7B7;
+  height: 531px;
 }
 
 /********************************* Footer ***************************/
@@ -187,37 +199,53 @@ body {
 .icon-apache{color: #F62459}
 
 /*** Responsive Design ***/
-/*** Cambiar por max-width para dispositovs -breakpoint- para arriba ***/
+/*** Cambiar por max-width para dispositovs -breakpoint- para avbajo ***/
 
-/*** Dispositovs extra pequeños (Telefonos) XS ***/
+/*** Dispositovs extra pequeños (Telefonos) XS para arriba ***/
 html {
   font-size: 12px;
 }
 
-/*** Dispositivos pequeños (SmarthPhones) SM para abajo ***/
+/*** Dispositivos pequeños (SmarthPhones) SM para arriba ***/
 @media (min-width: 576px) {  
   html {
     font-size: 12px;
   }
 }
 
-/*** Dispositivos Medianos (Tablets) MD para abajo ***/
+/*** Dispositivos Medianos (Tablets) MD para arriba ***/
 @media (min-width: 768px) {
   html {
     font-size: 14px;
   }
 }
 
-/*** Dispositivos Grandes para abajo (PC) LG ***/
+/*** Dispositivos Grandes para arriba (PC) LG ***/
 @media (min-width: 992px) {
   html {
     font-size: 16px;
   }
 }
 
-/*** Dispositivos Extra Grandes para abajo (PC, Laptops Grandes) XL ***/
+/*** Dispositivos Extra Grandes para arriba (PC, Laptops Grandes) XL ***/
 @media (min-width: 1200px) {
   html {
     font-size: 17px;
+  }
+}
+
+/*** Dispositivos pequeños (SmarthPhones) SM para abajo ***/
+@media (max-width: 767px) {
+  .session {
+    padding: 0;
+  }
+
+  .main {
+    padding: 0;
+  }
+
+  .jumbotron {
+    height: auto;
+    padding-bottom: 10px;
   }
 }
