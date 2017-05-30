@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Registrar Usuario</title>
+  <title>Registrar Proveedor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Meta viewport requerido por el grid de bootstrap -->
   <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"> <!-- CSS de bootstrap -->
   <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css"> <!-- Fuente de iconos generales -->
@@ -37,97 +37,36 @@ include('../complementos/menu.php');
       </div> 
       <!-- Main -->
       <div class="col main text-center">
-        <section class="jumbotron jumbotron-fluid formulario-lg">
+        <section class="jumbotron jumbotron-fluid formulario-sm">
           <div class="container-fluid">
-            <h1>Registrar nuevo usuario</h1>
+            <h1>Registrar nuevo proveedor</h1>
             <hr class="my-4">
             <form method="POST" action="?">
 
               <div class="form-group row d-flex justify-content-center">
-                <label for="cedula" class="col-2 col-md-2 col-form-label col-form-label-sm text-left"><b>Cedula</b></label>
+                <label for="rif" class="col-2 col-md-2 col-form-label col-form-label-sm text-left"><b>R.I.F.</b></label>
                 <div class="col-8 col-md-4">
                   <div class="input-group input-group-sm">
-                    <span class="input-group-addon"><i class="fa fa-address-card fa-fw"></i></span>
+                    <span class="input-group-addon"><i class="fa fa-fw fa-archive"></i></span>
                     <input data-toggle='tooltip' data-placement='bottom' data-trigger='hover'
                     autofocus="true" autocomplete="off" 
-                    type="text" name="cedula" class="form-control" placeholder="Cedula" maxlength="12" 
-                    pattern='[Vv]{1}-[0-9]{7,8}|[Ee]{1}-[0-9]{7,8}' 
-                    title='Ejemplo: V-01234567/v-9876472/E-12345678'
-                    value="<?php if(isset($_POST['cedula'])){echo $_POST['cedula'];} ?>" required>
+                    type="text" name="rif" class="form-control" placeholder="R.I.F." maxlength="12" 
+                    pattern='[Vv]{1}-[0-9]{8}-[0-9]{1}|[Gg]{1}-[0-9]{8}-[0-9]{1}|[Jj]{1}-[0-9]{8}-[0-9]{1}' title='Ejemplo: V-01234567-8/G-12345678-1/J-12345678-9'
+                    value="<?php if(isset($_POST['rif'])){echo $_POST['rif'];} ?>" required>
                   </div>
                 </div>
               </div>
 
               <div class="form-group row d-flex justify-content-center">
-                <label for="nombre" class="col-2 col-md-2 col-form-label col-form-label-sm text-left"><b>Nombre</b></label>
+                <label for="razon_social" class="col-2 col-md-2 col-form-label col-form-label-sm text-left"><b>Razon Social</b></label>
                 <div class="col-8 col-md-4">
                   <div class="input-group input-group-sm">
-                    <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+                    <span class="input-group-addon"><i class="fa fa-fw fa-briefcase"></i></span>
                     <input data-toggle='tooltip' data-placement='bottom' data-trigger='hover'
-                    autocomplete="off" maxlength="15" 
-                    type="text" name="nombre" class="form-control form-control-sm" placeholder="Nombre"
-                    pattern='[A-Za-zÁ-Úá-ú ]+' 
-                    title="Solo se admiten letras de la 'A' a la 'Z'; mayúsculas o minúsculas."
-                    value="<?php if(isset($_POST['nombre'])){echo $_POST['nombre'];}?>" required>
-                  </div>
-                </div>
-              </div>
-
-              <div class="form-group row d-flex justify-content-center">
-                <label for="apellido" class="col-2 col-md-2 col-form-label col-form-label-sm text-left"><b>Apellido</b></label>
-                <div class="col-8 col-md-4">
-                  <div class="input-group input-group-sm">
-                    <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
-                    <input data-toggle='tooltip' data-placement='bottom' data-trigger='hover'
-                    autocomplete="off" maxlength="15" 
-                    type="text" name="apellido" class="form-control form-control-sm" placeholder="Apellido"
-                    pattern='[A-Za-zÁ-Úá-ú ]+' 
-                    title="Solo se admiten letras de la 'A' a la 'Z'; mayúsculas o minúsculas."
-                    value="<?php if(isset($_POST['apellido'])){echo $_POST['apellido'];}?>" required>
-                  </div>
-                </div>
-              </div>
-
-              <div class="form-group row d-flex justify-content-center">
-                <label for="usuario" class="col-2 col-md-2 col-form-label col-form-label-sm text-left"><b>Usuario</b></label>
-                <div class="col-8 col-md-4">
-                  <div class="input-group input-group-sm">
-                    <span class="input-group-addon"><i class="fa fa-user-secret fa-fw"></i></span>
-                    <input data-toggle='tooltip' data-placement='bottom' data-trigger='hover'
-                    autocomplete="off" maxlength="15" 
-                    type="text" name="usuario" class="form-control form-control-sm" placeholder="Usuario"
-                    pattern='[A-Za-zÁ-Úá-ú0-9]+{4,15}' 
-                    title="Se admiten entre 4 y 10 caracteres, letras de la 'A' a la 'Z' y números" 
-                    value="<?php if(isset($_POST['usuario'])){echo $_POST['usuario'];}?>" required>
-                  </div>
-                </div>
-              </div>
-
-              <div class="form-group row d-flex justify-content-center">
-                <label for="contrasena" class="col-2 col-md-2 col-form-label col-form-label-sm text-left"><b>Contraseña</b></label>
-                <div class="col-8 col-md-4">
-                  <div class="input-group input-group-sm">
-                    <span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
-                    <input data-toggle='tooltip' data-placement='bottom' data-trigger='hover'
-                    autocomplete="off" maxlength="20" 
-                    type="text" name="contrasena" class="form-control form-control-sm" placeholder="Contraseña"
-                    pattern='(?=^.{8,20}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$' 
-                    title='La contraseña debe contener entre 8 y 20 carácteres, debe incluir al menos una letra minúscula, al menos una letra mayúscula y al menos un número' 
-                    value="<?php if(isset($_POST['contrasena'])){echo $_POST['contrasena'];}?>" required>
-                  </div>
-                </div>
-              </div>
-
-              <div class="form-group row d-flex justify-content-center">
-                <label for="privilegio" class="col-2 col-md-2 col-form-label col-form-label-sm text-left"><b>Privilegio</b></label>
-                <div class="col-8 col-md-4">
-                  <div class="input-group input-group-sm">
-                    <span class="input-group-addon"><i class="fa fa-id-badge fa-fw"></i></span>
-                    <select name="privilegio" class="form-control form-control-sm" required>
-                      <option value="" hidden="on">Seleccione...</option>
-                      <option>Administrador</option>
-                      <option>Usuario</option>
-                    </select>
+                    autocomplete="off" maxlength="40" 
+                    type="text" name="razon_social" class="form-control form-control-sm" placeholder="Razon Social"
+                    pattern='[A-Za-zÁ-Úá-ú .,]+' title="Solo se admiten letras de la 'A' a la 'Z'; mayúsculas o minúsculas, el punto '.' y la coma ',' "
+                    value="<?php if(isset($_POST['razon_social'])){echo $_POST['razon_social'];} ?>" required>
                   </div>
                 </div>
               </div>

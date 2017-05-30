@@ -8,6 +8,11 @@
   <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css"> <!-- Fuente de iconos generales -->
   <link rel="stylesheet" type="text/css" href="../css/font-mfizz.css"> <!-- Iconos de programacion -->
   <link rel="stylesheet" type="text/css" href="../css/estilos.css"> <!-- Estilos principales y personalizados -->
+  <!--- favicon/icono -->
+  <link rel="shortcut icon" href="../complementos/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../complementos/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../complementos/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../complementos/favicon-16x16.png">
 </head>
 <body>
   <!-- Cabecera -->
