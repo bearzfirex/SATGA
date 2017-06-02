@@ -16,6 +16,8 @@ El sistema no contiene todo lo que se puede considerar como "Gestion Administrat
 
 -Tether //Libreria de javascript para posicionar elementos, necesario para algunos componentes de bootstrap
 
+-DataTables //Libreria de Jquery que ofrece funciones de javascript pre-hechas para tablas con datos
+
 -Font awesome //Iconos Generales
 
 -Font mfizz //Iconos de Programacion
