@@ -1,4 +1,4 @@
-# SATGA-IU
+# SATGA
 Sistema de Apoyo a la Toma de decisiones para la Gestion Administrativa (SATGA).
 
 Este sistema es un pequeño proyecto para completar un trayecto en la universidad en la que estudio.
