@@ -89,23 +89,15 @@ $(document).ready(function(){
     $('.contenedor-menu').toggleClass('menu-index');
   });
 
-  if ($(document).width() < 768){ //Si es un dispositivo de pantalla pequeña oculta la columna del menu y si es grande la vuelve a mostrar
-    $('.columna-menu').removeClass('col-3');
-  } else {
-    $('.columna-menu').addClass('col-3');
-  }
-
   $(window).resize(function(){ //Fixes por si la pantalla cambia de tamaño
         if ($(document).width() > 768){ //se muestra el menu si la pantalla es grande
             $('.contenedor-menu .menu').css({'display' : 'block'});
-            $('.columna-menu').addClass('col-3'); 
         }
 
         if ($(document).width() < 768){ //Se oculta el menu se la pantalla es pequeña y se desactivan los submenus abiertos
             $('.contenedor-menu .menu').css({'display' : 'none'});
             $('.menu li ul').slideUp();
             $('.menu li').removeClass('activado');
-            $('.columna-menu').removeClass('col-3');
         }
   });
 

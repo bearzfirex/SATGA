@@ -13,7 +13,7 @@
             </div>
             <!-- Boton de Ocultar -->
             <div class="col-md-6 hidden-sm-down text-center">
-              <button id="ocultarBanner" type="button" role="button" class="btn btn-secondary">
+              <button id="ocultarBanner" type="button" class="btn btn-secondary">
                 <i class="fa fa-angle-double-up"></i> Ocultar Banner <i class="fa fa-angle-double-up"></i>
               </button>
             </div>

@@ -136,6 +136,10 @@ body {
     padding-top: 50px;
   }
 
+  .columna-menu {
+    padding-left: 0;
+  }
+
   .contenedor-menu{
     margin: 0;
     width: 100%;

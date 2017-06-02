@@ -8,22 +8,22 @@
           <div class="col-12 col-md-4 text-center text-md-right">
             <p class="iconos-pie">
               <a href="https://es.wikipedia.org/wiki/HTML5">
-                <i title="HTML5" class="icon-html5-alt" role="icon"></i></a>
+                <i title="HTML5" class="icon-html5-alt"></i></a>
               <a href="https://es.wikipedia.org/wiki/Hoja_de_estilos_en_cascada">
-                <i title="CSS3" class="icon-css3-alt" role="icon"></i></a>
+                <i title="CSS3" class="icon-css3-alt"></i></a>
               <a href="https://es.wikipedia.org/wiki/PHP">
-                <i title="PHP" class="icon-php-alt" role="icon"></i></a>
+                <i title="PHP" class="icon-php-alt"></i></a>
               <a href="https://es.wikipedia.org/wiki/JavaScript">
-                <i title="Javascript" class="icon-javascript-alt" role="icon"></i>
+                <i title="Javascript" class="icon-javascript-alt"></i>
               </a>
               <a href="https://es.wikipedia.org/wiki/Bootstrap_(framework)">
-                <i title="Bootstrap" class="icon-bootstrap" role="icon"></i>
+                <i title="Bootstrap" class="icon-bootstrap"></i>
               </a>
               <a href="https://es.wikipedia.org/wiki/MariaDB">
-                <i title="MariaDB" class="icon-mariadb" role="icon"></i>
+                <i title="MariaDB" class="icon-mariadb"></i>
               </a>
               <a href="https://es.wikipedia.org/wiki/Servidor_HTTP_Apache">
-                <i title="Apache" class="icon-apache" role="icon"></i>
+                <i title="Apache" class="icon-apache"></i>
               </a>
           </p>
           </div>
