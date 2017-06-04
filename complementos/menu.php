@@ -36,7 +36,7 @@
             <li><a href="#"><i class="icono izquierda fa fa-users fa-fw"></i>Vendedor<i class="icono derecha fa fa-chevron-down"></i></a>
               <ul>
                 <li><a href="../vendedores/registrar.php">Registrar<i class="icono derecha fa fa-plus"></i></a></li>
-                <li><a href="../vendedores/buscar.php">Buscar<i class="icono derecha fa fa-search"></i></a></li>
+                <li><a href="../vendedores/listar.php">Buscar<i class="icono derecha fa fa-search"></i></a></li>
               </ul>
             </li>
             <li><a href="#"><i class="icono izquierda fa fa-book fa-fw"></i>Reportes<i class="icono derecha fa fa-chevron-down"></i></a>
