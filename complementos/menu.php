@@ -5,7 +5,7 @@
             <li><a href="#"><i class="icono izquierda fa fa-address-book fa-fw"></i>Clientes<i class="icono derecha fa fa-chevron-down"></i></a>
               <ul>
                 <li><a href="../clientes/registrar.php">Registrar<i class="icono derecha fa fa-plus"></i></a></li>
-                <li><a href="../clientes/buscar.php">Buscar<i class="icono derecha fa fa-search"></i></a></li>
+                <li><a href="../clientes/listar.php">Buscar<i class="icono derecha fa fa-search"></i></a></li>
               </ul>
             </li>
             <li><a href="#"><i class="icono izquierda fa fa-address-card fa-fw"></i>Proveedores<i class="icono derecha fa fa-chevron-down"></i></a>
