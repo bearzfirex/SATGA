@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Registrar Usuario</title>
+  <title>Modificar Usuario</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Meta viewport requerido por el grid de bootstrap -->
   <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"> <!-- CSS de bootstrap -->
   <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css"> <!-- Fuente de iconos generales -->
@@ -45,7 +45,7 @@ include('../complementos/menu.php');
       <div class="col-12 col-md-9 main text-center">
         <section class="jumbotron jumbotron-fluid formulario-lg">
           <div class="container-fluid">
-            <h1>Registrar nuevo usuario</h1>
+            <h1>Modificar nuevo usuario</h1>
             <hr class="my-4">
             <form method="POST" action="../../controlador/usuarios.php">
 
@@ -165,10 +165,13 @@ include('../complementos/menu.php');
                   </div>
                 </div>
               </div>
-              
+
+<?php
+  echo "<input type='hidden' name='key' value='".$_POST['key']."'>";
+?>
               <div class="row d-flex justify-content-center">
                 <div class="col-5 col-md-3">
-                  <button type="submit" name="registrar" class="btn btn-success btn-block"><i class="fa fa-check-square-o"></i> Registrar</button>
+                  <button type="submit" name="registrar_cambios" class="btn btn-success btn-block"><i class="fa fa-check-square-o"></i> Modificar</button>
                 </div>
                 <div class="col-5 col-md-3">
                   <button type="reset" class="btn btn-danger btn-block">Limpiar <i class="fa fa-times-rectangle-o"></i></button>
