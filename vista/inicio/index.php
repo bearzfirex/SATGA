@@ -29,18 +29,24 @@ include('../complementos/cabecera.php');
   <section class="container-fluid pagina-central">
     <div class="row">
       <!-- Menu/Aside -->
-      <div class="col-3 columna-menu">
+      <div class="col-md-3 columna-menu">
 <?php
 include('../complementos/menu.php');
 ?>
       </div> 
       <!-- Main -->
-      <div class="col main text-center">
+      <div class="col-12 col-md-9 main text-center">
         <section class="jumbotron jumbotron-fluid">
           <div class="container-fluid">
-            <h1 class="display-3">¡Bienvenido a SATGA!</h1>
+            <h1 class="display-3">¡Bienvenido a S.A.T.G.A.!</h1>
             <hr class="my-4">
-            <p class="lead">{Nombre y Apellido} Usted posee privilegios de {privilegios} en el uso del sistema.</p>
+            <p class="lead">
+            <?php
+                echo $_SESSION['nombre']." ".$_SESSION['apellido']." Usted posee privilegios de ";
+                echo $_SESSION['privilegio'] == 1? "Usuario" : "Administrador";
+                echo " en el uso del sistema.";
+              ?>
+            </p>
             <hr class="my-4">
             <p>Por favor navegue por el sistema usando el menu de navegación</p>
           </div>
