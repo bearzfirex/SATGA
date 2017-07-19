@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Buscar de Vendedores</title>
+  <title>Buscar Vendedores</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Meta viewport requerido por el grid de bootstrap -->
   <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"> <!-- CSS de bootstrap -->
   <!-- Estilos para la libreria de dataTables -->
@@ -24,7 +24,7 @@
   <!-- Cabecera -->
   <header class="container-fluid">
     <div class="row">
-<?php 
+<?php
 include('../complementos/cabecera.php');
 ?>
 
@@ -39,41 +39,39 @@ include('../complementos/cabecera.php');
 <?php
 include('../complementos/menu.php');
 ?>
-      </div> 
+      </div>
       <!-- Main -->
-      <div class="col col-md-9 main">
+      <div class="col-12 col-md-9 main">
         <section class="jumbotron jumbotron-fluid listado">
           <div class="container-fluid">
             <h1 class="text-center">Busqueda de Vendedores</h1>
             <!-- Busqueda -->
-            <div <?php if(isset($_POST['buscar'])){ echo 'style="display: none;"'; }?> > 
+            <div <?php if(isset($_POST['buscar'])){ echo 'style="display: none;"'; }?> >
               <hr class="my-4">
-              <form method="POST" action="?">
+              <form method="POST" action="listar.php">
 
                 <div class="row d-flex justify-content-center text-center">
                   <div class="col-8 col-md-4">
-                    <p>Inserte la cedula del Vendedor</p>
-                  </div>                
+                    <p>Inserte un dato del vendedor</p>
+                  </div>
                 </div>
 
                 <div class="form-group row d-flex justify-content-center">
-                  <label for="cedula" class="col-2 col-md-2 col-form-label col-form-label-lg text-left sr-only"><b>Cedula</b></label>
+                  <label for="cedula" class="col-2 col-md-2 col-form-label col-form-label-lg text-left sr-only"><b>Vendedor</b></label>
                   <div class="col-8 col-md-4">
                     <div class="input-group input-group-lg">
                       <span class="input-group-addon"><i class="fa fa-address-card fa-fw"></i></span>
                       <input data-toggle='tooltip' data-placement='bottom' data-trigger='hover'
-                      autofocus="true" autocomplete="off" 
-                      type="search" name="cedula" class="form-control" placeholder="Cedula" maxlength="12" 
-                      pattern='[Vv]{1}-[0-9]{7,8}|[Ee]{1}-[0-9]{7,8}' 
-                      title='Ejemplo: V-01234567/v-9876472/E-12345678'
-                      value="<?php if(isset($_POST['cedula'])){echo $_POST['cedula'];} ?>" required>
+                      autofocus="true" autocomplete="off"
+                      type="search" name="buscar" class="form-control" placeholder="Buscar Vendedor" maxlength="10"
+                      pattern=".{3,}" required>
                     </div>
                   </div>
                 </div>
 
                 <div class="row d-flex justify-content-center">
                   <div class="col-8 col-md-4">
-                    <button type="submit" name="buscar" class="btn btn-success btn-block"><i class="fa fa-search"></i> Buscar</button>
+                    <button type="submit" class="btn btn-success btn-block"><i class="fa fa-search"></i> Buscar</button>
                   </div>
                 </div>
               </form>
@@ -83,134 +81,44 @@ include('../complementos/menu.php');
               <table <?php if(!isset($_POST['buscar'])){ echo 'style="display: none;"'; } else { echo 'id="list"'; }?> class="table table-striped table-hover table-bordered table-sm dt-responsive nowrap" width="100%" cellspacing="0" >
                 <thead class="thead">
                   <tr>
-                    <th class="all">R.I.F.</th>
-                    <th>Razon Social</th>
-                    <th>Teléfono</th>
-                    <th class="none">Dirección</th>
-                    <th>Estado</th>
-                    <th class="all">Opciones</th>
+                    <th class="all print">Cédula</th>
+                    <th class="print">Nombre</th>
+                    <th class="print">Apellido</th>
+                    <th class="print">Teléfono</th>
+                    <th class="none print">Dirección</th>
+                    <th class="none print">Fecha de Ingreso</th>
+                    <th class="print">Cargo</th>
+                    <th class="print">Estado</th>
+                    <?php if($_SESSION['privilegio']>1)
+                    {
+                    echo "<th class='all'>Opciones</th>";
+                    }
+                    ?>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>J-11111111-1</td>
-                    <td>Razon Bolivariana</td>
-                    <td>04261111111</td>
-                    <td>Direeccion bien pinche larga que caga tablas</td>
-                    <td>Activo</td>
-                    <td>
-                      <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="opciones" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Opciones
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="opciones">
-                          <button class="dropdown-item" type="button">Modificar</button>
-                          <button class="dropdown-item" type="button">Desactivar</button>                          
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>J-2222222-1</td>
-                    <td>Razon Bolivariana</td>
-                    <td>04261111111</td>
-                    <td>Direeccion bien pinche larga que caga tablas</td>
-                    <td>Activo</td>
-                    <td>
-                      <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="opciones" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Opciones
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="opciones">
-                          <button class="dropdown-item" type="button">Modificar</button>
-                          <button class="dropdown-item" type="button">Desactivar</button>                          
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>J-3333333-1</td>
-                    <td>Razon Bolivariana</td>
-                    <td>04261111111</td>
-                    <td>Direeccion bien pinche larga que caga tablas</td>
-                    <td>Activo</td>
-                    <td>
-                      <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="opciones" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Opciones
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="opciones">
-                          <button class="dropdown-item" type="button">Modificar</button>
-                          <button class="dropdown-item" type="button">Desactivar</button>                          
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>J-4444444-1</td>
-                    <td>Razon Bolivariana</td>
-                    <td>04261111111</td>
-                    <td>Direeccion bien pinche larga que caga tablas</td>
-                    <td>Activo</td>
-                    <td>
-                      <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="opciones" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Opciones
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="opciones">
-                          <button class="dropdown-item" type="button">Modificar</button>
-                          <button class="dropdown-item" type="button">Desactivar</button>                          
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>J-5555555-1</td>
-                    <td>Razon Bolivariana</td>
-                    <td>04261111111</td>
-                    <td>Direeccion bien pinche larga que caga tablas</td>
-                    <td>Activo</td>
-                    <td>
-                      <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="opciones" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Opciones
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="opciones">
-                          <button class="dropdown-item" type="button">Modificar</button>
-                          <button class="dropdown-item" type="button">Desactivar</button>                          
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>J-6666666-1</td>
-                    <td>Razon Bolivariana</td>
-                    <td>04261111111</td>
-                    <td>Direeccion bien pinche larga que caga tablas</td>
-                    <td>Activo</td>
-                    <td>
-                      <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="opciones" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Opciones
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="opciones">
-                          <button class="dropdown-item" type="button">Modificar</button>
-                          <button class="dropdown-item" type="button">Desactivar</button>                          
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
+<?php
+$listar=True;
+include('../../controlador/vendedores.php');
+?>
                 </tbody>
                 <tfoot>
                   <tr>
-                    <th class="all">R.I.F.</th>
-                    <th>Razon Social</th>
-                    <th>Teléfono</th>
-                    <th class="none">Dirección</th>
-                    <th>Estado</th>
-                    <th class="all">Opciones</th>
+                    <th class="all print">Cédula</th>
+                    <th class="print">Nombre</th>
+                    <th class="print">Apellido</th>
+                    <th class="print">Teléfono</th>
+                    <th class="none print">Dirección</th>
+                    <th class="print">Fecha de Ingreso</th>
+                    <th class="print">Cargo</th>
+                    <th class="print">Estado</th>
+                    <?php if($_SESSION['privilegio']>1)
+                    {
+                    echo "<th class='all'>Opciones</th>";
+                    }
+                    ?>
                   </tr>
-                </tfoot>                
+                </tfoot>
               </table>
           </div>
         </section>
@@ -224,7 +132,7 @@ include('../complementos/menu.php');
 <?php
 include('../complementos/footer.php');
 ?>
-    </div>    
+    </div>
   </footer>
   <script type="text/javascript" src="../js/jquery.js"></script> <!-- Jquery -->
   <script type="text/javascript" src="../js/tether.min.js"></script> <!-- Libreria para mantener fijos los objetos (requerido por bootstrap) -->
@@ -237,8 +145,85 @@ include('../complementos/footer.php');
   <script type="text/javascript" src="../js/datatables/buttons.print.min.js"></script>
   <script type="text/javascript" src="../js/datatables/dataTables.responsive.min.js"></script>
   <script type="text/javascript" src="../js/datatables/responsive.bootstrap.min.js"></script>
-  
-  <script type="text/javascript" src="../js/list.js"></script> <!-- Javascript para las listas -->
+
+  <script type="text/javascript"> <!-- Javascript para las listas -->
+    $(document).ready( function () {
+      var lista = $('#list').DataTable( {
+        pageLength: 5,
+        language: {
+          processing:     "Procesando...",
+          lengthMenu:     "Mostrar _MENU_ registros",
+          zeroRecords:    "No se encontraron resultados",
+          emptyTable:     "No hay ningún dato disponible",
+          info:           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+          infoEmpty:      "Mostrando registros del 0 al 0 de un total de 0 registros",
+          infoFiltered:   "(filtrado de un total de _MAX_ registros)",
+          infoPostFix:    "",
+          search:         "Buscar:",
+          url:            "",
+          infothousands:  ",",
+          loadingRecords: "Cargando...",
+          paginate: {
+            first:    "Primero",
+            last:     "Último",
+            next:     "Siguiente",
+            previous: "Anterior"
+          },
+          aria: {
+            sortAscending:  ": Activar para ordenar la columna de manera ascendente",
+            sortDescending: ": Activar para ordenar la columna de manera descendente"
+          }
+      },
+        lengthChange: false,
+          buttons: [
+            { 
+              extend: 'print', text: 'Imprimir',
+              exportOptions: {
+                columns: '.print'
+              },
+              footer: true,
+              customize: function ( win ) {
+                $(win.document.body)
+                  .css( 'font-size', '16pt' )
+                  .prepend(
+                    '<img src="http://localhost/SATGA/vista/complementos/portada_reporte.png" style="top:0; left:0;width:100%;height:100%;" />'
+                  );
+
+                $(win.document.body).find( 'h1' )
+                  .addClass( 'col-12 text-center' )
+                  .after(
+                    '<div class="row sesion"></div>'
+                  );
+
+                $(win.document.body).find( '.sesion' )
+                  .prepend(
+                    '<div class="col-6 text-left"><p>Impreso por: <?php echo $_SESSION['nombre']." ".$_SESSION['apellido']; ?></p</div>',
+                    '<div class="col-6 text-right"><p><?php echo date('d/m/Y h:i:s a', time() - 21600); ?></p></div>'
+                  );
+
+                $(win.document.body).find( 'div' )
+                  .css( 'font-size', 'inherit' );
+   
+                $(win.document.body).find( 'table' )
+                  .css( 'font-size', 'inherit' );
+   
+   
+                $(win.document.body).find( 'td' )
+                  .css('text-align','center')
+                  .css('vertical-align','middle');
+                $(win.document.body).find( 'th' )
+                  .css('text-align','center')
+                  .css('vertical-align','middle');
+              }        
+            }
+          ]
+      } );
+
+      lista.buttons().container()
+          .appendTo( '#list_wrapper .col-md-6:eq(0)' );
+
+    });
+  </script>
   <script type="text/javascript" src="../js/main.js"></script>  <!-- Javascript principal, funciones personalizadas -->
 </body>
 </html>
