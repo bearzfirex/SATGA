@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Registrar Proveedor</title>
+  <title>Modificar Proveedor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Meta viewport requerido por el grid de bootstrap -->
   <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"> <!-- CSS de bootstrap -->
   <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css"> <!-- Fuente de iconos generales -->
@@ -39,7 +39,7 @@ include('../complementos/menu.php');
       <div class="col-12 col-md-9 main text-center">
         <section class="jumbotron jumbotron-fluid formulario-sm">
           <div class="container-fluid">
-            <h1>Registrar nuevo proveedor</h1>
+            <h1>Modificar proveedor</h1>
             <hr class="my-4">
             <form method="POST" action="../../controlador/proveedores.php">
 
@@ -66,7 +66,7 @@ include('../complementos/menu.php');
                     autocomplete="off" maxlength="40" 
                     type="text" name="razon_social" class="form-control form-control-sm" placeholder="Razón Social"
                     pattern='[A-Za-zÁ-Úá-ú .,]+' title="Solo se admiten letras de la 'A' a la 'Z'; mayúsculas o minúsculas, el punto '.' y la coma ',' "
-                    value="<?php if(isset($_POST['razon_social'])){echo $_POST['razon_social'];} ?>" required>
+                    value="<?php if(isset($_POST['razon_social'])){echo "".$_POST['razon_social']."";} ?>" required>
                   </div>
                 </div>
               </div>
@@ -98,13 +98,15 @@ include('../complementos/menu.php');
                   </div>
                 </div>
               </div>
+
+              <input type="hidden" name="key" value="<?php if(isset($_POST['rif'])){echo $_POST['rif'];} ?>">
               
               <div class="row d-flex justify-content-center">
                 <div class="col-5 col-md-3">
-                  <button type="submit" name="registrar" class="btn btn-success btn-block"><i class="fa fa-check-square-o"></i> Registrar</button>
+                  <button type="submit" name="registrar_cambios" class="btn btn-success btn-block"><i class="fa fa-check-square-o"></i> Modificar</button>
                 </div>
                 <div class="col-5 col-md-3">
-                  <button type="reset" class="btn btn-danger btn-block">Limpiar <i class="fa fa-times-rectangle-o"></i></button>
+                  <button type="reset" class="btn btn-danger btn-block">Deshacer <i class="fa fa-times-rectangle-o"></i></button>
                 </div>
               </div>
             </form>
