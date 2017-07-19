@@ -1,7 +1,8 @@
 .formulario-lg {
   padding: 0;
+  overflow: auto;
 }
 
-#seleccion {
+.seleccion {
   margin-bottom: 20px;
 }

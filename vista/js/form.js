@@ -1,6 +1,20 @@
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip(); //activar el tooltip de bootstrap
 
+  $( ".fecha" ).datepicker({
+    dateFormat: "dd/mm/yy"
+  }); //Instalacion del "date picker" de Jquery UI
+  //$( ".fecha" ).datepicker( "option", "dateFormat", "dd/mm/yy" ); //seleccion del formato para la fecha
+
+  //Funcion de validacion para fechas en facturas
+  $('.fecha-inicial-venta').on('change', function() {
+    $('.fecha-final-venta').datepicker('option', 'minDate', $(this).val());
+  });
+
+  $('.fecha-inicial-compra').on('change', function() {
+    $('.fecha-final-compra').datepicker('option', 'minDate', $(this).val());
+  });
+
   //Formulario de factura
   $('#seleccion').on('change', function(){ //Oculta y muestra el formulario correspondiente mediante un select
     var prev = $(this).data('val');
@@ -40,8 +54,8 @@ $(document).ready(function(){
     }
   });
 
-  //Formulario de Clientes
-  $('input[pattern]').keyup(function(){
+  //Validacion de formularios
+  $('input[pattern]').on('change keyup', function(){
     if(this.checkValidity())
     {
       $(this).removeClass('form-control-warning');

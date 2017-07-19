@@ -1,4 +1,38 @@
-$(document).ready(function(){
+$(document).ready(function () {
+  //Muestra la cantidad de notificaciones
+  var notificaciones = $('.note').length;
+  if(notificaciones > 0)
+  {
+    $('.num').text(notificaciones);
+  }
+  
+  //Funcion para detectar cookies
+  function getCookie(cname) {
+    var name = cname + '=';
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+
+    return '';
+  }
+
+  //Verifica si el banner ha sido ocultado con anterioridad
+  var banner = getCookie('banner');
+  if (banner == "oculto") {
+    $(".banner").slideToggle(0);   //Se ocultar el banner
+    $(".banner").toggleClass("hidden"); //Se le agrega una clase como futuro identificador
+    $("#ocultarBanner").empty();
+    $("#ocultarBanner").append("<i class='fa fa-angle-double-down'></i> Mostrar Banner <i class='fa fa-angle-double-down'></i>");
+  }
+
   //Funcion al ocultar el banner
   $("#ocultarBanner").click(function(){
     //Se crean dos variables con los lementos html y texto para intercalar al ocultar y mostrar el banner
@@ -10,10 +44,12 @@ $(document).ready(function(){
 
     $("#ocultarBanner").empty(); //elimina todos los elementos hijos del boton
 
-    if ($(".banner").hasClass('hidden')){  //agrega los elementos correspondientes segun sea si esta oculto o activo    
-      $("#ocultarBanner").append(oculto)
-    } else {      
-      $("#ocultarBanner").append(activo)
+    if ($(".banner").hasClass('hidden')){  //agrega los elementos correspondientes segun sea si esta oculto o activo
+      $("#ocultarBanner").append(oculto);
+      document.cookie = "banner=oculto; path=/";
+    } else {
+      $("#ocultarBanner").append(activo);
+      document.cookie = "banner=activo; path=/";
     }
   });
 
@@ -54,7 +90,7 @@ $(document).ready(function(){
     if (str_dia.length == 1) {
         d = '0' + d;
     }
-    
+
     str_mes = new String(m); //Se le agrega un 0 a los meses en caso de que sea menor a 10
     if (str_mes.length == 1) {
         m = '0' + m;
@@ -63,7 +99,7 @@ $(document).ready(function(){
     var hora = h + ":" + mi + ":" + s + " " + momento; //Se crea la cadena a mostrar en la interfaz para la hora
     $('#fecha').text(fecha); //Se inserta la fecha y la hora en la interfaz
     $('#hora').text(hora);
-    
+
   }, 1000);
 
   //Desplegable del menu
@@ -90,11 +126,11 @@ $(document).ready(function(){
   });
 
   $(window).resize(function(){ //Fixes por si la pantalla cambia de tamaño
-        if ($(document).width() > 768){ //se muestra el menu si la pantalla es grande
+        if ($(document).width() >= 767){ //se muestra el menu si la pantalla es grande
             $('.contenedor-menu .menu').css({'display' : 'block'});
         }
 
-        if ($(document).width() < 768){ //Se oculta el menu se la pantalla es pequeña y se desactivan los submenus abiertos
+        if ($(document).width() <= 767){ //Se oculta el menu se la pantalla es pequeña y se desactivan los submenus abiertos
             $('.contenedor-menu .menu').css({'display' : 'none'});
             $('.menu li ul').slideUp();
             $('.menu li').removeClass('activado');
@@ -103,5 +139,13 @@ $(document).ready(function(){
 
   $('.menu li ul li a').click(function(){
         window.location.href = $(this).attr("href"); //Reactiva el HREF para los sub menu//
+  });
+
+  $('.confirmacion').click(function(confirmar){
+    var accion = $(this).text();
+    if(!confirm('¿Esta seguro de que desea '+accion.toLowerCase()+'?'))
+    {
+      confirmar.preventDefault();
+    }
   });
 });

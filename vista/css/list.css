@@ -1,31 +1,30 @@
-/* Estilos personalizados para la libreria DataTable */
 
-@media (min-width: 992px) {
-  .dataTables_info {
-    display: inline-block;
-  }
-
-  .dataTables_paginate {
-    display: inline-block;
-    margin-left: 5% !important;
-  }
-
-  .dataTables_filter {
-    display: inline-block;
-    margin-left: 50% !important;
-  }
-}
-
-@media (min-width: 1200px) {
-  .dataTables_paginate {
-    display: inline-block;
-    margin-left: 10% !important;
-  }
-}
 
 /*Estilos personalizados para las listas */
 
 .listado {
- padding: 0;
- max-width: 100%;
+  padding: 0;
+  max-width: 100%;
+  overflow: auto;
+  line-height: 1.0 !important;
+}
+
+.cantidad {
+  height: 50px;
+}
+
+.input-cantidad {
+  width: auto;
+}
+
+.modal-header {
+  background-color: #E9D460;
+}
+
+.lista-modal {
+  list-style: none;
+}
+
+.lista-modal > li {
+  padding: 10px 20px;
 }

@@ -1,21 +1,21 @@
 html{
-    background: url("../complementos/background-login.jpg") no-repeat;
+  background: url("../complementos/background-login.jpg") no-repeat;
   background-size: cover;
-    min-height: 100%;
+  min-height: 100%;
 }
 
 body{
   background-color: transparent;
 }
 
-#login-form{
-  max-width: 800px;
-  margin: 120px auto;
+.login-form{
+  max-width: 800px !important;
+  margin: 120px auto !important;
 }
 
-#login-form .image{
+.login-form .image{
   float:left;
-  background-image: url("../complementos/Logo SATGA Beta.png");
+  background-image: url("../complementos/Logo SATGA.png");
   height: 400px;
   width: 50%;
   background-size: 100% 100%;
@@ -23,7 +23,7 @@ body{
   background-color: #ECF0F1;
 }
 
-#login-form .frm{
+.login-form .frm{
   float:right;
   height: 400px;
     width: 50%;
@@ -33,55 +33,56 @@ body{
     background-color: white;
 }
 
-#login-form h1{
+.login-form h1{
   margin-top: 30px;
   margin-bottom: 20px;
 }
 
-#login-form .form-control{
+.login-form .form-control{
   width: 90%;
   padding: 12px 20px;
   height: auto;
 }
 
-button{
+.btn{
+  cursor: pointer;
   transition: 0.3s;
   transition-timing-function: ease-out; ;
 }
 
-.btn-success:hover,.btn-primary:hover {
+.btn:hover {
     box-shadow: 0px 0px 3px #000;
 }
 
 @media screen and (max-width: 700px){
-  #login-form .image{
+  .login-form .image{
     width: 30%;
       background-position: 60%;
   }
 
-  #login-form .frm{
+  .login-form .frm{
     width: 70%;
   }
 
-  #login-form .form-control{
+  .login-form .form-control{
     width: 100%;
   }
 }
 
 @media screen and (max-width: 500px){
-  #login-form .image{
+  .login-form .image{
     display: none;
   }
 
-  #login-form .frm{
+  .login-form .frm{
     width: 100%;
   }
 
-  #login-form h1{
+  .login-form h1{
     text-align: center;
   }
 
-  #login-form .btn{
+  .login-form .btn{
     width: 100%;
     margin-top: 20px;
   }

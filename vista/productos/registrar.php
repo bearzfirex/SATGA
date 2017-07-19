@@ -30,18 +30,18 @@ include('../complementos/cabecera.php');
   <section class="container-fluid pagina-central">
     <div class="row">
       <!-- Menu/Aside -->
-      <div class="col-3 columna-menu">
+      <div class="col-md-3 columna-menu">
 <?php
 include('../complementos/menu.php');
 ?>
       </div> 
       <!-- Main -->
-      <div class="col main text-center">
+      <div class="col-12 col-md-9 main text-center">
         <section class="jumbotron jumbotron-fluid formulario-sm">
           <div class="container-fluid">
             <h1>Registrar nuevo producto</h1>
             <hr class="my-4">
-            <form method="POST" action="?">
+            <form method="POST" action="../../controlador/productos.php">
 
               <div class="form-group row d-flex justify-content-center">
                 <label for="codigo" class="col-2 col-md-2 col-form-label col-form-label-sm text-left"><b>Código</b></label>
@@ -106,10 +106,10 @@ include('../complementos/menu.php');
                     <span class="input-group-addon"><i class="fa fa-fw fa-flask"></i></span>
                     <select name="envase" class="form-control form-control-sm" required>
                       <option value="" hidden="on">Seleccione el envase</option>
-                      <option value="plastico">Plástico</option>
-                      <option value="vidrio_nr">Vidrio NR</option>
-                      <option value="vidrio_r">Vidrio R</option>
-                      <option value="lata">Lata</option>
+                      <option value="PLASTICO" <?php if((isset($_POST['envase'])) && ($_POST['envase']=='PLASTICO')){echo 'selected';} ?>>Plástico</option>
+                      <option value="VIDRIO_NR" <?php if((isset($_POST['envase'])) && ($_POST['envase']=='VIDRIO_NR')){echo 'selected';} ?>>Vidrio NR</option>
+                      <option value="VIDRIO_R" <?php if((isset($_POST['envase'])) && ($_POST['envase']=='VIDRIO_R')){echo 'selected';} ?>>Vidrio R</option>
+                      <option value="LATA" <?php if((isset($_POST['envase'])) && ($_POST['envase']=='LATA')){echo 'selected';} ?>>Lata</option>
                     </select>
                   </div>
                 </div>
@@ -117,10 +117,10 @@ include('../complementos/menu.php');
 
               <div class="row d-flex justify-content-center">
                 <div class="col-5 col-md-3">
-                  <button type="submit" class="btn btn-success btn-block"><i class="fa fa-check-square-o"></i> Registrar</button>
+                  <button type="submit" name='registrar' class="btn btn-success btn-block"><i class="fa fa-check-square-o"></i> Registrar</button>
                 </div>
                 <div class="col-5 col-md-3">
-                  <button type="submit" class="btn btn-danger btn-block">Limpiar <i class="fa fa-times-rectangle-o"></i></button>
+                  <button type="reset" class="btn btn-danger btn-block">Limpiar <i class="fa fa-times-rectangle-o"></i></button>
                 </div>
               </div>
             </form>
