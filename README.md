@@ -1,3 +1,5 @@
+Este sistema esta obsoleto, fue uno de mis primeros sistemas. Por lo tanto esta mal estructurado y la seguridad es muy baja.
+
 # SATGA
 Sistema de Apoyo a la Toma de decisiones para la Gestion Administrativa (SATGA).
 
